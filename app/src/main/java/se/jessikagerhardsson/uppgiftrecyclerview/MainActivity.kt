@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
 
     var myAdapter = RowAdapter()
     var ny = "Rad "
-    var test = 0
+    var test = -1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.addButton).setOnClickListener {
-
+            test++
             myAdapter.nytt.add(ny + test)
 
 
