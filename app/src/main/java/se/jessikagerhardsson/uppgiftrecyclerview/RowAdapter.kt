@@ -18,6 +18,9 @@ class RowAdapter() : RecyclerView.Adapter<MyViewHolder>() {
         return nytt.size
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
+
+
     }
 }
 class MyViewHolder (view: View) : RecyclerView.ViewHolder(view) {
