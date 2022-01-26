@@ -11,12 +11,13 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     var myAdapter = RowAdapter()
-    var ny = "Rad"
+    var ny = "Rad "
     var test = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
         val rowview = findViewById<RecyclerView>(R.id.rowRV)
 
         rowview.layoutManager = LinearLayoutManager(this)
@@ -24,12 +25,15 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+
 
         findViewById<Button>(R.id.addButton).setOnClickListener {
 
+            myAdapter.nytt.add(ny + test)
 
+
+            myAdapter.notifyDataSetChanged()
 
 
         }

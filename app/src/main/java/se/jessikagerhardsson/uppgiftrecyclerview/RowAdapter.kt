@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RowAdapter() : RecyclerView.Adapter<MyViewHolder>() {
 
-    var nytt = mutableListOf<String>("Rad ")
+    var nytt = mutableListOf<String>("")
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val vh = MyViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.layout_rowadapter, parent, false))
@@ -19,7 +19,9 @@ class RowAdapter() : RecyclerView.Adapter<MyViewHolder>() {
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
+        holder.hejsan.text = nytt[position]
 
+        //notifyDataSetChanged()
 
     }
 }
